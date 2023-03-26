@@ -48,7 +48,7 @@ def map_reduce(file, chunks_num):
             writer_csv.writerow({'date': date, 'clicks': clicks})
 
 
-# Mapper used 3rd step
+# Mapper used in 3rd step
 def mapping(chunk):
     mapped = {}
     for row in chunk:
