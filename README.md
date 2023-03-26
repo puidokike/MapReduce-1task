@@ -5,7 +5,7 @@ This code demonstrates a simplified map-reduce framework written in Python and u
 1. Ensure that Python 3.x is installed on your machine.
 2. First run main.py file to autocreate directories.
 3. An example CSV file has been included. You may replace it with any other file of your preference: place the CSV file you want to process in the 'data/clicks' directory.
-4. Modify the start_file and num_of_chunks variables in the __if __name__ == '__main__':__ block to specify the starting file and number of chunks to process.
+4. Modify the start_file and num_of_chunks variables in the __if __name__ == '__main__':__ block to specify the starting file name and number of chunks to process.
 5. The output CSV file will be located in the autocreated 'data/total_clicks' directory.
 
 *Note: This code assumes that the input CSV file has a header row with the following column name: 'date'. If your input file has different column name, please rename it to 'date'.*
