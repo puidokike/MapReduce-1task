@@ -23,7 +23,7 @@ def map_reduce(file, chunks_num):
         chunk = dataset[i:i + chunk_size]
         chunks.append(chunk)
 
-    # 4th step - using "multiprocessing" module to process mapped data in parallel
+    # 3rd step - using "multiprocessing" module to process mapped data in parallel
     with Pool() as pool:
         results = pool.map(mapping, chunks)
 
@@ -35,7 +35,7 @@ def map_reduce(file, chunks_num):
             else:
                 combined_result[date_value] = click
 
-    # 5th step - reducing data
+    # 4th step - reducing data
     res_dir_path = 'data/total_clicks'
     res_file_path = os.path.join(res_dir_path, 'total-clicks.csv')
     if not os.path.exists(res_dir_path):
@@ -48,7 +48,7 @@ def map_reduce(file, chunks_num):
             writer_csv.writerow({'date': date, 'clicks': clicks})
 
 
-# Mapper used 4th step
+# Mapper used 3rd step
 def mapping(chunk):
     mapped = {}
     for row in chunk:
